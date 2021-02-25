@@ -105,6 +105,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular-Viewmodel-Users"
+    }
+  },
+  "defaultProject": "Angular-Viewmodel-Users",
+  "cli": {
+    "analytics": "6e15add7-239b-499f-a40f-d190d98de9ca"
+  }
 }
