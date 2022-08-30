@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve  Angular-Viewmodel-Users --proxyConfig proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "json-server": "json-server .\\json-server\\db.json --routes .\\json-server\\routes.json",
+    "json-server": "json-server -w .\\json-server\\db.json --routes .\\json-server\\routes.json",
     "serve:json-server": "npm run json-server & ng serve Angular-Viewmodel-Users --proxyConfig proxy.conf.json"
   },
   "private": true,

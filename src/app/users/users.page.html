@@ -1,0 +1,43 @@
+<h3>Users</h3>
+
+<router-outlet></router-outlet>
+
+<ng-container *ngIf="vmChanges | async as vm">
+  
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <!-- <li><a [routerLink]="['list', vm.users]">User List</a></li> -->
+  </ul>
+
+  <!-- <h1>Users</h1> -->
+
+  
+  <hr />
+      <div>
+        Name
+        <input type="text" #name/>
+      </div>
+      <div>
+        Age
+        <input type="number" #age/>
+      </div>
+    <div>
+      <button (click)="addState.next({ id:0, name: name.value, age: age.value})">Add User</button>
+    </div>
+  <hr> 
+<!-- <pre> {{ vm | json }} </pre> -->
+<div class="list">
+    <div *ngFor="let user of vm.items">
+      <button (click)="deleteState.next(user)" >X</button>  
+      <button (click)="detailState.next(user)" >detail</button>
+      {{user.id}} - {{user.name}} - {{user.age}}
+    </div> 
+    
+    <div style="margin-top:1em" *ngIf="vm.selectedUser">
+      {{vm.selectedUser.id}} - {{vm.selectedUser.name}}
+      <button (click)="detailCloseState.next()">close</button>
+    </div>
+</div>
+
+  
+</ng-container>
